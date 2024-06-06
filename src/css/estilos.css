@@ -1,0 +1,45 @@
+/* Estilos Gerais */
+body {
+    font-family: sans-serif;
+  }
+  
+  .container {
+    padding: 20px;
+  }
+  
+  /* Estilos para Tabelas */
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table th,
+  .table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  /* Estilos para Formulários */
+  .field {
+    margin-bottom: 15px;
+  }
+  
+  .label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .input,
+  .textarea,
+  .select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Estilos para Botões */
+  .button {
+    margin-right: 10px;
+  }
+  
