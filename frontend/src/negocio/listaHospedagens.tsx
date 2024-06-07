@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Hospedagens() {
     // Dados de exemplo para hospedagens (substituir por dados reais posteriormente)
@@ -8,7 +9,7 @@ function Hospedagens() {
         <div className="container mt-5">
             <h1 className="title">Hospedagens</h1>
 
-            <button className="button is-primary mb-3">Registrar Hospedagem</button>
+            <Link to="/cadastroHospedagem" className="button is-primary mb-3">Cadastrar Hospedagem</Link>
 
             {/* Tabela de Hospedagens */}
             <table className="table is-striped is-fullwidth">
