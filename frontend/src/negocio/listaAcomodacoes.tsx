@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Acomodacao } from '../interfaces/acomodacao';
 function Acomodacoes() {
-    // Dados de exemplo para acomodações (substituir por dados reais posteriormente)function Acomodacoes() {
+    
   const [acomodacoes, setAcomodacoes] = useState<Acomodacao[]>([
     { id: 1, nome: 'Standard Solteiro', tipo: 'Solteiro', capacidade: 1, preco: 150, disponivel: true, caracteristicas: ['TV', 'Wi-Fi'] },
     { id: 2, nome: 'Luxo Casal', tipo: 'Casal', capacidade: 2, preco: 250, disponivel: false, caracteristicas: ['TV', 'Wi-Fi', 'Banheira'] },
@@ -16,10 +16,7 @@ function Acomodacoes() {
     return (
         <div className="container mt-5">
             <h1 className="title">Acomodações</h1>
-
-            <button className="button is-primary mb-3">Cadastrar Acomodação</button>
-
-            {/* Tabela de Acomodações */}
+            
             <table className="table is-striped is-fullwidth">
                 <thead>
                     <tr>

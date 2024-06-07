@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function Hospedes() {
-    // Dados de exemplo para hóspedes (substituir por dados reais posteriormente)
+    
     const [hospedes, setHospedes] = useState([
         { id: 1, nome: 'João Silva', documento: '123.456.789-00', dependentes: [] },
-        { id: 2, nome: 'Maria Souza', documento: '987.654.321-11', dependentes: [] }
+        { id: 2, nome: 'Maria Souza', documento: '987.654.321-11', dependentes: [] },
+        { id: 3, nome: 'Pedro Santos', documento: '555.555.555-55', dependentes: [] },
+        { id: 4, nome: 'Ana Oliveira', documento: '111.111.111-11', dependentes: [] },
     ]);
 
     return (
@@ -14,7 +16,7 @@ function Hospedes() {
 
             <Link to="/cadastroHospede" className="button is-primary mb-3">Cadastrar Hóspede</Link>
 
-            {/* Tabela de Hóspedes */}
+            
             <table className="table is-striped is-fullwidth">
                 <thead>
                     <tr>

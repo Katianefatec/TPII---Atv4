@@ -6,4 +6,5 @@ export interface Acomodacao {
     preco: number;
     disponivel: boolean;
     caracteristicas: string[];
+
   }
