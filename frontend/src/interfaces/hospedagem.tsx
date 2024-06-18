@@ -1,4 +1,5 @@
 import { Acomodacao } from "./acomodacao";
+import Dependente from "./dependente";
 import Hospede from "./hospede";
 
 export default interface Hospedagem {
@@ -7,4 +8,5 @@ export default interface Hospedagem {
     acomodacao: Acomodacao;
     dataEntrada: string;
     dataSaida: string;
+    dependentes?: Dependente[];
   }

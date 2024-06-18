@@ -1,14 +1,14 @@
 import React, { useState, ChangeEvent, FormEvent } from 'react';
-import Dependente from '../interfaces/dependente';
+
 import { Acomodacao } from '../interfaces/acomodacao';
 import Hospede from '../interfaces/hospede';
-
+import { useNavigate } from 'react-router-dom';
 
 function CadastroHospedagem() {
   const [hospedes, setHospedes] = useState<Hospede[]>([
-    { id: 1, nome: 'João Silva', documento: '123.456.789-00', telefone: '(11) 99999-9999', endereco: 'Rua das Flores, 123' },
-    { id: 2, nome: 'Maria Santos', documento: '987.654.321-11', telefone: '(21) 88888-8888', endereco: 'Avenida do Sol, 456' },
-    { id: 3, nome: 'Pedro Alves', documento: '555.555.555-55', telefone: '(31) 77777-7777', endereco: 'Praça da Lua, 789' },
+    { id: 1, nome: 'João Silva', documento: '123.456.789-00', telefone: '(11) 99999-9999', endereco: 'Rua das Flores, 123', dependentes: [] },
+    { id: 2, nome: 'Maria Santos', documento: '987.654.321-11', telefone: '(21) 88888-8888', endereco: 'Avenida do Sol, 456', dependentes: [] },
+    { id: 3, nome: 'Pedro Alves', documento: '555.555.555-55', telefone: '(31) 77777-7777', endereco: 'Praça da Lua, 789', dependentes: [] },
   ]);
 
   const [acomodacoes, setAcomodacoes] = useState<Acomodacao[]>([
@@ -20,6 +20,7 @@ function CadastroHospedagem() {
   const [acomodacaoSelecionada, setAcomodacaoSelecionada] = useState<number | null>(null);
   const [dataEntrada, setDataEntrada] = useState('');
   const [dataSaida, setDataSaida] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();    
@@ -27,8 +28,9 @@ function CadastroHospedagem() {
       hospedeId: hospedeSelecionado,
       acomodacaoId: acomodacaoSelecionada,
       dataEntrada,
-      dataSaida
+      dataSaida    
     });
+    navigate('/hospedagens');    
   };
 
 

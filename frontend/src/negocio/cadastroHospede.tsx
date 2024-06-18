@@ -1,6 +1,6 @@
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 import Dependente from '../interfaces/dependente';
-
+import { useNavigate } from 'react-router-dom';
 function CadastroHospede() {
   const [hospede, setHospede] = useState({
     nome: '',
@@ -37,10 +37,14 @@ function CadastroHospede() {
     }));
   };
 
+  const navigate = useNavigate();
+
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
     console.log(hospede); // Aqui você poderia enviar os dados para o backend no futuro
+    navigate('/hospedes');
   }; 
+  
 
   return (
     <div className="container mt-5">
